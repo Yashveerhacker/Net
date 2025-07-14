@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #141414;
+            color: #fff;
+        }
+        .banner {
+            position: relative;
+            min-height: 80vh;
+            background: url('https://i.pinimg.com/736x/67/23/25/672325a508c65d355e209833b3b981c1.jpg') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .banner::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(1, 1, 1, 0.6);
+            z-index: 1;
+        }
+        nav {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e50914;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-buttons button {
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid #fff;
+            border-radius: 3px;
+            padding: 6px 14px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .nav-buttons button:hover {
+            background: #e50914;
+            border-color: #e50914;
+        }
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+        .banner-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .banner-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .email-form input[type="email"] {
+            padding: 12px;
+            width: 90%;
+            max-width: 300px;
+            border-radius: 3px;
+            border: none;
+            font-size: 1rem;
+        }
+        .email-form button {
+            background: #e50914;
+            color: #dbdbdb;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .email-form button:hover {
+            background: #b0060f;
+        }
+        .separation {
+            width: 100%;
+            height: 4px;
+            background: #d1cdcd;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            background: #181818;
+        }
+        .feature-card {
+            background: #222;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 320px;
+            width: 100%;
+            text-align: center;
+        }
+        .feature-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .feature-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #e50914;
+        }
+        .feature-card p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+        footer {
+            background: #860c0c;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+            .banner-content p {
+                font-size: 0.9rem;
+            }
+            .nav-buttons button {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            .email-form input[type="email"] {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .nav-buttons button {
+                padding: 8px 18px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <nav>
+            <span class="logo">YASHFLIX</span>
+            <div class="nav-buttons">
+                <button>English</button>
+                <button>Sign In</button>
+            </div>
+        </nav>
+        <div class="banner-content">
+            <h1>Unlimited movies, TV shows and more.</h1>
+            <p>Watch anywhere. Cancel anytime. Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="email-form">
+                <input type="email" placeholder="Email address" required style="width: 100%; background-color: #201a1a;">
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="separation"></div>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="https://i.pinimg.com/1200x/9a/00/3a/9a003a253f79f27941854dc08d7b8af6.jpg" alt="Watch Anywhere">
+            <h2>Watch Anywhere</h2>
+            <p>Stream on your TV, laptop, phone, or tablet. Enjoy your favorite content wherever you are.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://i.pinimg.com/736x/67/23/25/672325a508c65d355e209833b3b981c1.jpg" alt="Blockbuster Movies">
+            <h2>Blockbuster Movies</h2>
+            <p>Enjoy the latest movies, TV shows, and series on Yashflix. New content added regularly.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://i.pinimg.com/736x/e0/fc/de/e0fcde3f96c509041c671bd1f4eb5ecb.jpg" alt="No Commitments">
+            <h2>No Commitments</h2>
+            <p>No contracts, no hassle. Cancel your subscription anytime with just one click.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://i.pinimg.com/736x/67/23/25/672325a508c65d355e209833b3b981c1.jpg" alt="Exclusive Content">
+            <h2>Exclusive Content</h2>
+            <p>Access exclusive shows and movies only available on Yashflix. Be the first to watch!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Yashflix. All rights reserved.</p>
+        <p>Terms of Use | Privacy Policy</p>
+    </footer>
+
+</body>
+</html>
